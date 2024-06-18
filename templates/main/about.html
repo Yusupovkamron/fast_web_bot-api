@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+		<!-- Start Why Choose Us Section -->
+		<div class="why-choose-section">
+			<div class="container">
+
+				<div class="row justify-content-between align-items-center">
+					{% for about in abouts %}
+
+						<div class="col-lg-5">
+							<div class="img-wrap">
+								<img src="{{about.image.url}}" alt="Image" class="{{about.name}}">
+							</div>
+						</div>
+					{% endfor %}
+
+				</div>
+			</div>
+		</div>
+		<!-- End Why Choose Us Section -->
+
+
+		{% endblock %}

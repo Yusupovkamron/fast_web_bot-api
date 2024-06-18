@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+		<!-- Start Blog Section -->
+		<div class="blog-section">
+			<div class="container">
+
+				<div class="row">
+					{% for discount in discounts %}
+
+
+						<div class="col-12 col-sm-6 col-md-4 mb-5">
+							<div class="post-entry">
+								<a href="#" class="post-thumbnail"><img src="images/post-1.jpg" alt="Image" class="img-fluid"></a>
+								<div class="post-content-entry">
+									<h3><a href="#">{{discount.name}}</a></h3>
+									<div class="meta">
+										<img src=" {{discount.image.url}}" class="img-fluid">
+										<span>discount<a href="#">{{discount.price}}</a></span> <span>NEW PRICE <a href="#"> {{discount.new_price}} 19, 2021</a></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<!-- End Blog Section -->
+
+
+		{% endblock %}
